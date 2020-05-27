@@ -15,9 +15,7 @@ module.exports = {
     await Promise.all(
       files.map(async (file) => {
         const html = await fs.promises.readFile(file, 'utf-8');
-        console.log(`Transforming ${file}`);
         const optimizedHtml = await ampOptimizer.transformHtml(html);
-        console.log(`Transformed ${file}`);
         await fs.promises.writeFile(file, optimizedHtml);
       })
     );

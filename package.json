@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-amp-server-side-rendering",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Render your AMP pages, server-side.",
   "keywords": [
     "netlify",
