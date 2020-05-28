@@ -7,7 +7,7 @@ module.exports = {
     const pattern = constants.PUBLISH_DIR + '/**/*.html';
 
     const files = await new Promise((resolve, reject) => {
-      glob(pattern, (err, files) => {
+      glob(pattern, { nodir: true }, (err, files) => {
         (err) ? reject(err) : resolve(files);
       });
     });
