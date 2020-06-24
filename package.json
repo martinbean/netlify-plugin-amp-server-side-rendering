@@ -26,7 +26,7 @@
     "url": "git+https://github.com/martinbean/netlify-plugin-amp-server-side-rendering.git"
   },
   "dependencies": {
-    "@ampproject/toolbox-optimizer": "^2.4.0",
+    "@ampproject/toolbox-optimizer": "^2.5.4",
     "glob": "^7.1.6"
   },
   "engines": {
