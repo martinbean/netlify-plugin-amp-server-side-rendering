@@ -3,12 +3,19 @@ const fs = require('fs');
 const glob = require('glob');
 
 module.exports = {
-  onPostBuild: async ({ constants, utils }) => {
+  onPostBuild: async ({ inputs, constants, utils }) => {
     const pattern = constants.PUBLISH_DIR + '/**/*.html';
+    const options = {
+      nodir: true
+    }
+
+    if (inputs.ignorePattern) {
+      options.ignore = inputs.ignorePattern
+    }
 
     const files = await new Promise((resolve, reject) => {
-      glob(pattern, { nodir: true }, (err, files) => {
-        (err) ? reject(err) : resolve(files);
+      glob(pattern, options, (err, files) => {
+        (err) ? reject(err): resolve(files);
       });
     });
 

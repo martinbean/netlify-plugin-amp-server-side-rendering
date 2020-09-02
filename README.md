@@ -7,6 +7,8 @@ To install, add the following lines to your **netlify.toml** file:
 ```toml
 [[plugins]]
 package = "netlify-plugin-amp-server-side-rendering"
+  [plugins.inputs]
+  ignorePattern = "public/admin/*"
 ```
 
 [1]: https://amp.dev/

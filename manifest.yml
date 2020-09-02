@@ -1,1 +1,4 @@
 name: netlify-plugin-amp-server-side-rendering
+inputs:
+  - name: ignorePattern
+    description: Ignore pattern
