@@ -9,6 +9,8 @@ For file-based installation, add the following lines to your **netlify.toml** fi
 ```toml
 [[plugins]]
 package = "netlify-plugin-amp-server-side-rendering"
+  [plugins.inputs]
+  ignorePattern = "public/admin/*"
 ```
 
 To complete file-based installation, from your project's base directory, use npm, yarn, or any other Node.js package manager to add the plugin to `devDependencies` in `package.json`.
